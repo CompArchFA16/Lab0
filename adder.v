@@ -46,5 +46,11 @@ module FullAdder4bit
   input[3:0] a,     // First operand in 2's complement format
   input[3:0] b      // Second operand in 2's complement format
 );
-    // Your Code Here
+    wire temp_cout[2:0];
+
+    structuralFullAdder fa0(sum[0], temp_cout[0], a[0], b[0], 0);
+    structuralFullAdder fa1(sum[1], temp_cout[1], a[1], b[1], temp_cout[0]);
+    structuralFullAdder fa2(sum[2], temp_cout[2], a[2], b[2], temp_cout[1]);
+    structuralFullAdder fa3(sum[3], carryout, a[3], b[3], temp_cout[2]);
+    assign overflow = carryout^temp_cout[2];
 endmodule
