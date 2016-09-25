@@ -79,3 +79,7 @@ module FullAdder4bit
     `OR orgate(overflow, andtop, andbottom);
 
 endmodule
+
+module forTesting();
+FullAdder4bit adder(.sum(res0), .carryout(cout), .overflow(ovf), .a(opA), .b(opB));
+endmodule
