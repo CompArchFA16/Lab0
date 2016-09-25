@@ -36,6 +36,8 @@ module structuralFullAdder
     `AND andgate2(AxorBandCin, AxorB, carryin);
     `OR orgate(carryout, AandB, AxorBandCin);
 
+    
+
 endmodule
 
 module FullAdder4bit
@@ -47,9 +49,12 @@ module FullAdder4bit
     input[3:0] b      // Second operand in 2's complement format
 );
 
+    
+
     wire carryout0;
     wire carryout1;
     wire carryout2;
+    
 
     structuralFullAdder adder0(sum[0], carryout0, a[0], b[0], 0); // carryin=0 for first bit
     //and andgate0(tempCarryout, carryout, 1);
@@ -58,38 +63,19 @@ module FullAdder4bit
     structuralFullAdder adder3(sum[3], carryout, a[3], b[3], carryout2); // carryin=0 for first bit
 
     // figure out if overflow
+    wire nA3;
+    wire nB3;
+    wire nS3;
+    wire andtop;
+    wire andbottom;
 
-    if (a[3] == b[3]) begin
-        if (sum[3] != carryout) begin
-            assign overflow =1;
-        end
+    `NOT notgatea(nA3, a[3]);
+    `NOT notgateb(nB3, b[3]);
+    `NOT notgates(nS3, sum[3]);
 
-        else begin
-            assign overflow = 0;
-        end
-    end
+    `AND andgate1(andtop, nA3, nB3, sum[3]);
+    `AND andgate2(andbottom, a[3], b[3], nS3);
 
-    else begin
-        assign overflow = 0;
-    end
-
-    /*if (a[3] == b[3]) begin // if adding positive and negative
-        if (carryout != sum[3]) begin // if the last carryout is different from the last sum
-            not notgate(overflow, 0); // set overflow to 1 (true)
-        end
-
-        if (sum[3] != a[3]) begin
-            not notgate(overflow, 0); // set overflow to 1 (true)
-        end
-
-        else begin
-            not notgate(overflow, 1); // set overflow to 0 (false)
-        end
-    end
-
-    else begin
-        not notgate(overflow, 1); // set overflow to 0 (false)
-    end */
-
+    `OR orgate(overflow, andtop, andbottom);
 
 endmodule
