@@ -98,6 +98,7 @@ Push your files to your team GitHub repository (the one you listed on the team f
     1.	The top level module for synthesis onto the FPGA
 1.	Associated run scripts, e.g.  Makefile
 
+Submit a pull request to the course repo (CompArchFA16/Lab0) for us to respond to with feedback.
 
 ## Hints
 Now that we have signals that are more than 1 bit wide, it makes sense to refer to them using buses.  This allows us to reference all of the related bits in a convenient manner. 
