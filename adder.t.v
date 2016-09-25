@@ -7,7 +7,7 @@ module testFullAdder();
     wire[3:0] sum;
     wire carryout, overflow;
 
-    reg[8:0] i; //counting thru forloop
+    //reg[8:0] i; //counting thru forloop
 
     //behavioralFullAdder adder (sum, carryout, a, b, carryin);
     FullAdder4bit adder4bit (sum, carryout, overflow, a, b);
@@ -18,12 +18,21 @@ module testFullAdder();
     //$dumpvars;
 
         // Your test code here
-    $display("a3  a2  a1  a0 | b3  b2  b1  b0 | OF  s3  s2  s1  s0  ");
-    for (i=8'b00000000; i<=8'b11111111; i=i+1) begin
-        a=i[7:4]; b=i[3:0]; #1000 
-        $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], overflow, sum[3], sum[2], sum[1], sum[0]);
-        //a=1101; b=1101; #1000 
-        //$display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], overflow, sum[3], sum[2], sum[1], sum[0]);
-    end
+    $display("a3  a2  a1  a0 | b3  b2  b1  b0 | CO  s3  s2  s1  s0  OF | Case");
+    //for (i=8'b00000000; i<=8'b11111111; i=i+1) begin
+        //a=i[7:4]; b=i[3:0]; #1000 
+        //$display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+    //end
+    a=0001; b=0001; #1000 
+    $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b  |  ++NO", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+    a=0110; b=0110; #1000 
+    $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b  |  ++O", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+    a=1111; b=1111; #1000 
+    $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b  |  --NO", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+    a=1010; b=1010; #1000 
+    $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b  |  --O", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+    a=0101; b=1100; #1000 
+    $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   %b  |  +-", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
+
     end
 endmodule

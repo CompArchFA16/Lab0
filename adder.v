@@ -34,12 +34,15 @@ module FullAdder4bit
   input[3:0] b      // Second operand in 2's complement format
 );
     // Your Code Here
-    // first bit adder (0)
 
   wire co0, co1, co2; 
   structuralFullAdder adder0 (sum[0], co0, a[0], b[0], 0);
   structuralFullAdder adder1 (sum[1], co1, a[1], b[1], co0);
   structuralFullAdder adder2 (sum[2], co2, a[2], b[2], co1);
-  structuralFullAdder adder3 (sum[3], overflow, a[3], b[3], co2);
+  structuralFullAdder adder3 (sum[3], carryout, a[3], b[3], co2);
+
+  wire n_overflow;
+  `XOR Xor_3(n_overflow, sum[3], carryout);
+  `NOT N_Xor_3(overflow, n_overflow);
 
 endmodule
