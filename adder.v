@@ -42,9 +42,10 @@ module FullAdder4bit
   input[3:0] a,     // First operand in 2's complement format
   input[3:0] b      // Second operand in 2's complement format
 );
-  wire carryout0, carryout1, carryout2, carryout3
-  FullAdder(sum[0], 0, a[0], b[0], carryout0)
-  FullAdder(sum[1], carryout0, a[1], b[1], carryout1)
-  FullAdder(sum[2], carryout0, a[2], b[2], carryout2)
-  FullAdder(sum[3], carryout0, a[3], b[3], carryout)
+  wire cin;
+  assign cin = 1'b0;
+  FullAdder a0(.sum(sum[0]), .carryout(cout0), .a(a[0]), .b(b[0]), .carryin(cin));
+  FullAdder a1(.sum(sum[1]), .carryout(cout1), .a(a[1]), .b(b[1]), .carryin(cout0));
+  FullAdder a2(.sum(sum[2]), .carryout(cout2), .a(a[2]), .b(b[2]), .carryin(cout1));
+  FullAdder a3(.sum(sum[3]), .carryout(carryout), .a(a[3]), .b(b[3]), .carryin(cout2));
 endmodule
