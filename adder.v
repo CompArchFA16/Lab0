@@ -35,9 +35,11 @@ module FullAdder4bit
 );
     // Your Code Here
     // first bit adder (0)
-  structuralFullAdder adder0 (sum[0], carryout, a[0], b[0], 0);
-  structuralFullAdder adder1 (sum[1], carryout, a[1], b[1], carryout);
-  structuralFullAdder adder2 (sum[2], carryout, a[2], b[2], carryout);
-  structuralFullAdder adder3 (sum[3], overflow, a[3], b[3], carryout);
+
+  wire co0, co1, co2; 
+  structuralFullAdder adder0 (sum[0], co0, a[0], b[0], 0);
+  structuralFullAdder adder1 (sum[1], co1, a[1], b[1], co0);
+  structuralFullAdder adder2 (sum[2], co2, a[2], b[2], co1);
+  structuralFullAdder adder3 (sum[3], overflow, a[3], b[3], co2);
 
 endmodule
