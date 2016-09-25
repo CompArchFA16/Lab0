@@ -4,6 +4,8 @@
 `define AND and #50
 `define OR or #50
 `define NOT not #50
+`define XNOR xnor #50
+`define XOR xor #50
 
 module FullAdder
 (
@@ -48,4 +50,9 @@ module FullAdder4bit
   FullAdder a1(.sum(sum[1]), .carryout(cout1), .a(a[1]), .b(b[1]), .carryin(cout0));
   FullAdder a2(.sum(sum[2]), .carryout(cout2), .a(a[2]), .b(b[2]), .carryin(cout1));
   FullAdder a3(.sum(sum[3]), .carryout(carryout), .a(a[3]), .b(b[3]), .carryin(cout2));
+
+  wire same_sign, switched;
+  `XNOR xnor0(same_sign, a[3], b[3]);
+  `XOR xor0(switched, sum[3], a[3]);
+  `AND and0(overflow, same_sign, switched);
 endmodule

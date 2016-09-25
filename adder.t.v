@@ -15,8 +15,7 @@ module testFullAdder4bit();
     // $dumpfile("testFullAdder4bit.vcd");
     // $dumpvars(0, testFullAdder4bit);
 
-    $display(" A  B Ci | Sm Co | Expected Output");
-    opA =0;opB=1; #500;
+    opA =4;opB=4; #1000;
     $display(" %b  %b  |  %b  %b  %b", opA, opB, res0, cout, ovf);
 
     // for (i = 0; i < 16; i = i +1) begin
