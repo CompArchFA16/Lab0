@@ -7,8 +7,8 @@
 
 module behavioralFullAdder
 (
-    output sum, 
-    output carryout,
+    output sum,       // Sum of a and b (2's complement)
+    output carryout,  // Carry out of the sum
     input a, 
     input b, 
     input carryin
@@ -27,12 +27,14 @@ module structuralFullAdder
 );
     wire AandB, AandC, BandC;
 
+    // sum is 1 when either one of the inputs is 1 or all of them are 1
     `XOR xorGate(sum, a, b, carryin);
 
     `AND andGate0(AandB, a, b);
     `AND andGate1(AandC, a, carryin);
     `AND andGate2(BandC, b, carryin);
 
+    // carryout = (AB)+(BC)+(AC)
     `OR orGate(carryout, AandB, AandC, BandC);
 
 endmodule
