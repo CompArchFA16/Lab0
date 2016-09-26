@@ -6,7 +6,6 @@ module testAdder4bit();
   wire[3:0] sum;
   wire carryout, overflow;
 
-  // behavioralFullAdder adder (sum, carryout, a, b, carryin);
   FullAdder4bit dut(sum, carryout, overflow, a, b);
 
   initial begin
