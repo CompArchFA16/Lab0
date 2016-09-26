@@ -14,17 +14,17 @@ module testAdder4bit();
     $dumpvars;
 
     $display("A     B      | Sum   CarryOut Overflow | ESum ECarryout EOverflow");
-    a[3]=0;a[2]=1;a[1]=0;a[0]=0;b[3]=0;b[2]=0;b[1]=1;b[0]=0; #1000
-    $display("%b  %b   | %b  %b        %b        | 0110 ", a, b, sum, carryout, overflow);
-    a[0]=0;a[1]=0;a[2]=1;a[3]=0;b[0]=1;b[1]=1;b[2]=0;b[3]=1; #1000
-    $display("%b  %b   | %b  %b        %b        | 1111 ", a, b, sum, carryout, overflow);
-    a[0]=1;a[1]=1;a[2]=1;a[3]=0;b[0]=0;b[1]=0;b[2]=1;b[3]=1; #1000
-    $display("%b  %b   | %b  %b        %b        | 0001 ", a, b, sum, carryout, overflow);
-    a[0]=1;a[1]=0;a[2]=1;a[3]=1;b[0]=1;b[1]=1;b[2]=1;b[3]=1; #1000
-    $display("%b  %b   | %b  %b        %b        | 1100 ", a, b, sum, carryout, overflow);
-    a[0]=0;a[1]=1;a[2]=0;a[3]=1;b[0]=0;b[1]=1;b[2]=0;b[3]=0; #1000
-    $display("%b  %b   | %b  %b        %b        | 1001 ", a, b, sum, carryout, overflow);
-    a[0]=1;a[1]=0;a[2]=0;a[3]=0;b[0]=1;b[1]=1;b[2]=1;b[3]=0; #1000
-    $display("%b  %b   | %b  %b        %b        | 0110 ", a, b, sum, carryout, overflow);
+    a = 4'b0100; b = 4'b0010; #1000
+    $display("%b  %b   | %b  %b        %b        | 0110 0         0", a, b, sum, carryout, overflow);
+    a = 4'b0010; b = 4'b1101; #1000
+    $display("%b  %b   | %b  %b        %b        | 1111 0         0", a, b, sum, carryout, overflow);
+    a = 4'b1110; b = 4'b0011; #1000
+    $display("%b  %b   | %b  %b        %b        | 0001 1         1", a, b, sum, carryout, overflow);
+    a = 4'b1011; b = 4'b1111; #1000
+    $display("%b  %b   | %b  %b        %b        | 1100 1         0", a, b, sum, carryout, overflow);
+    a = 4'b0101; b = 4'b0100; #1000
+    $display("%b  %b   | %b  %b        %b        | 1001 0         0", a, b, sum, carryout, overflow);
+    a = 4'b1000; b = 4'b1110; #1000
+    $display("%b  %b   | %b  %b        %b        | 0110 1         1", a, b, sum, carryout, overflow);
   end
 endmodule
