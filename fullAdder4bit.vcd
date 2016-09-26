@@ -1,5 +1,5 @@
 $date
-	Mon Sep 26 11:43:03 2016
+	Mon Sep 26 11:48:27 2016
 $end
 $version
 	Icarus Verilog
@@ -11,22 +11,22 @@ $scope module behavioralFullAdder $end
 $var wire 1 ! a $end
 $var wire 1 " b $end
 $var wire 1 # carryin $end
-$var wire 1 $ carryout $end
-$var wire 1 % sum $end
+$var wire 1 $ sum $end
+$var wire 1 % carryout $end
 $upscope $end
 $scope module testAdder4bit $end
-$var wire 1 & carryout $end
+$var wire 4 & sum [3:0] $end
 $var wire 1 ' overflow $end
-$var wire 4 ( sum [3:0] $end
+$var wire 1 ( carryout $end
 $var reg 4 ) a [3:0] $end
 $var reg 4 * b [3:0] $end
 $scope module dut $end
 $var wire 4 + a [3:0] $end
 $var wire 4 , b [3:0] $end
-$var wire 1 & carryout $end
-$var wire 3 - internalCarryouts [2:0] $end
 $var wire 1 ' overflow $end
-$var wire 4 . sum [3:0] $end
+$var wire 4 - sum [3:0] $end
+$var wire 3 . internalCarryouts [2:0] $end
+$var wire 1 ( carryout $end
 $scope module adder0 $end
 $var wire 1 / a $end
 $var wire 1 0 abCinXor $end
@@ -64,7 +64,7 @@ $var wire 1 I abSum $end
 $var wire 1 J abXor $end
 $var wire 1 K b $end
 $var wire 1 L carryin $end
-$var wire 1 & carryout $end
+$var wire 1 ( carryout $end
 $var wire 1 M sum $end
 $upscope $end
 $upscope $end
@@ -75,33 +75,33 @@ $dumpvars
 xM
 xL
 0K
-zJ
-zI
+xJ
+xI
 xH
 0G
 xF
 xE
 xD
 0C
-zB
-zA
+xB
+xA
 x@
 1?
 x>
 x=
 x<
 1;
-z:
-z9
+x:
+x9
 x8
 07
 x6
 x5
 04
 03
-z2
-z1
-z0
+x2
+x1
+x0
 0/
 bx .
 bx -
@@ -109,9 +109,9 @@ b10 ,
 b100 +
 b10 *
 b100 )
-bx (
+x(
 x'
-x&
+bx &
 x%
 x$
 z#
@@ -119,46 +119,46 @@ z"
 z!
 $end
 #50
-0J
-0I
-1B
-0A
-1:
-09
-00
-02
 01
+02
+09
+1:
+0A
+1B
+0I
+0J
+00
 #100
 0<
-0H
+bx0 &
+bx0 -
 06
-bx0 (
+0H
 bx0 .
 05
-bx0 -
 #150
 08
+bx10 &
+bx10 -
 1>
-bx10 (
-bx10 .
-0&
+0(
 #200
 0D
+bx00 .
 0=
-bx00 -
 #250
 0@
+bx110 &
+bx110 -
 1F
-bx110 (
-bx110 .
 #300
 0L
+b0 .
 0E
-b0 -
 #350
+b110 &
+b110 -
 0M
-b110 (
-b110 .
 #400
 0'
 #1000
@@ -166,15 +166,14 @@ b110 .
 13
 b1011 *
 b1011 ,
-b100 )
 #1050
 1J
 12
 #1100
 1M
+b1111 &
+b1111 -
 16
-b1111 (
-b1111 .
 #1150
 1'
 #2000
@@ -192,19 +191,19 @@ b111 +
 0B
 #2100
 1L
+b100 .
 1E
-b100 -
+b1011 &
+b1011 -
 0F
-b1011 (
-b1011 .
 #2150
 1H
+b11 &
+b11 -
 0M
-b11 (
-b11 .
 #2200
 0'
-1&
+1(
 #2250
 1'
 #3000
@@ -214,8 +213,8 @@ b11 .
 07
 b1111 *
 b1111 ,
-b1101 +
 b1101 )
+b1101 +
 #3050
 11
 02
@@ -223,27 +222,27 @@ b1101 )
 0J
 #3100
 1<
+b101 .
 15
-b101 -
 06
 0H
+b1010 &
+b1010 -
 1M
-b1010 (
-b1010 .
 #3150
 18
+b1000 &
+b1000 -
 0>
-b1000 (
-b1000 .
 0'
 #3200
 1D
+b111 .
 1=
-b111 -
 #3250
+b1100 &
+b1100 -
 1F
-b1100 (
-b1100 .
 #4000
 0K
 0C
@@ -265,25 +264,25 @@ b1010 +
 #4100
 0L
 0<
-0&
+0(
 1H
 0M
 0E
 08
+b110 &
+b110 -
 1>
-b110 (
-b110 .
+b10 .
 05
-b10 -
 #4150
 0H
 1M
+b1100 &
+b1100 -
 0>
-b1100 (
-b1100 .
-1&
+1(
 #4200
-0&
+0(
 #4250
 1'
 #5000
@@ -309,47 +308,47 @@ b1 +
 0F
 0M
 0=
+b10 &
+b10 -
 1>
-b10 (
-b10 .
+b1 .
 15
-b1 -
 #5150
 1L
 0'
 0@
 1F
 18
+b100 &
+b100 -
 0>
-b100 (
-b100 .
+b101 .
 1E
-b101 -
 #5200
 0L
 1D
+b1100 &
+b1100 -
 1M
-b1100 (
-b1100 .
 0E
+b11 .
 1=
-b11 -
 #5250
 1'
 0M
 1@
+b0 &
+b0 -
 0F
-b0 (
-b0 .
 #5300
 1L
 0'
+b111 .
 1E
-b111 -
 #5350
+b1000 &
+b1000 -
 1M
-b1000 (
-b1000 .
 #5400
 1'
 #6000
