@@ -1,14 +1,15 @@
 `include "adder4bit.v"
 
 module testAdder4bit();
-    reg [3:0]a;
-    reg [3:0]b;
-    wire [3:0]sum;
-    wire carryout, overflow;
+  reg[3:0] a;
+  reg[3:0] b;
+  wire[3:0] sum;
+  wire carryout, overflow;
 
-    // behavioralFullAdder adder (sum, carryout, a, b, carryin);
-    FullAdder4bit dut(sum, carryout, overflow, a, b);
-    initial begin
+  // behavioralFullAdder adder (sum, carryout, a, b, carryin);
+  FullAdder4bit dut(sum, carryout, overflow, a, b);
+
+  initial begin
     $dumpfile("fullAdder4bit.vcd");
     $dumpvars;
 
@@ -25,6 +26,5 @@ module testAdder4bit();
     $display("%b  %b   | %b  %b        %b        | 1001 ", a, b, sum, carryout, overflow);
     a[0]=1;a[1]=0;a[2]=0;a[3]=0;b[0]=1;b[1]=1;b[2]=1;b[3]=0; #1000
     $display("%b  %b   | %b  %b        %b        | 0110 ", a, b, sum, carryout, overflow);
-
-    end
+  end
 endmodule
