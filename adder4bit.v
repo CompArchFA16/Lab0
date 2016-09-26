@@ -21,6 +21,7 @@ module FullAdder4bit
   structuralFullAdder adder2 (sum[2], internalCarryouts[2], a[2], b[2], internalCarryouts[1]);
   structuralFullAdder adder3 (sum[3], carryout, a[3], b[3], internalCarryouts[2]);
 
-  `XOR xorgate(overflow, carryout, sum[3]);
-
+  wire sum3_n;
+  `NOT notBigSum(sum3_n, sum[3]);
+  `AND overflowgate(overflow, carryout, sum3_n);
 endmodule

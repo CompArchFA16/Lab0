@@ -21,7 +21,7 @@ module testAdder4bit();
     a = 4'b1110; b = 4'b0011; #1000
     $display("%b  %b   | %b  %b        %b        | 0001 1         1", a, b, sum, carryout, overflow);
     a = 4'b1011; b = 4'b1111; #1000
-    $display("%b  %b   | %b  %b        %b        | 1100 1         0", a, b, sum, carryout, overflow);
+    $display("%b  %b   | %b  %b        %b        | 1010 1         0", a, b, sum, carryout, overflow);
     a = 4'b0101; b = 4'b0100; #1000
     $display("%b  %b   | %b  %b        %b        | 1001 0         0", a, b, sum, carryout, overflow);
     a = 4'b1000; b = 4'b1110; #1000
