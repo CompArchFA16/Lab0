@@ -30,8 +30,8 @@ module structuralFullAdder
 
     `AND andgate(abSum, a, b); //multiply a and b
     `XOR xorgate(abXor, a, b); //exclusive or for a, b
-    `AND andgate(abCinXor, abXor, carryin); //multiply carryin and the xor value for a, b
+    `AND andgate2(abCinXor, abXor, carryin); //multiply carryin and the xor value for a, b
     `OR orgate(carryout, abSum, abCinXor); //add the sum of a, b and the product of xor and carryin
-    `XOR xorgate(sum, abXor, carryin); //xor the xor of a, b and carryin
+    `XOR xorgate2(sum, abXor, carryin); //xor the xor of a, b and carryin
 
 endmodule
