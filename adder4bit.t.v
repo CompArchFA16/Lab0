@@ -30,7 +30,7 @@ module testAdder4bit();
     a = 4'b0010; b = 4'b1101; #1000
     $display("%b  %b   | %b  %b        %b        | 1111 0         0", a, b, sum, carryout, overflow);
 
-    // 5. 5 - 5 = 0
+    // 5. 5 - 5 = 0 *
     a = 4'b0101; b = 4'b1011; #1000
     $display("%b  %b   | %b  %b        %b        | 0000 1         0", a, b, sum, carryout, overflow);
 
@@ -38,7 +38,7 @@ module testAdder4bit();
     a = 4'b1000; b = 4'b0111; #1000
     $display("%b  %b   | %b  %b        %b        | 1111 0         0", a, b, sum, carryout, overflow);
 
-    // 7. -2 + 3 = 1
+    // 7. -2 + 3 = 1 *
     a = 4'b1110; b = 4'b0011; #1000
     $display("%b  %b   | %b  %b        %b        | 0001 1         0", a, b, sum, carryout, overflow);
 
@@ -54,15 +54,15 @@ module testAdder4bit();
     a = 4'b1010; b = 4'b1110; #1000
     $display("%b  %b   | %b  %b        %b        | 1000 1         0", a, b, sum, carryout, overflow);
 
-    // 11. 5 + 4 = 9
+    // 11. 5 + 4 = 9 *
     a = 4'b0101; b = 4'b0100; #1000
     $display("%b  %b   | %b  %b        %b        | 1001 0         1", a, b, sum, carryout, overflow);
 
-    // 12. 5 + 7 = 12
+    // 12. 5 + 7 = 12 *
     a = 4'b0101; b = 4'b0111; #1000
     $display("%b  %b   | %b  %b        %b        | 1100 0         1", a, b, sum, carryout, overflow);
 
-    // 13. 7 + 7 = 14
+    // 13. 7 + 7 = 14 *
     a = 4'b0111; b = 4'b0111; #1000
     $display("%b  %b   | %b  %b        %b        | 1110 0         1", a, b, sum, carryout, overflow);
 
