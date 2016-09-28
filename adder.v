@@ -42,7 +42,7 @@ module FullAdder4bit
   structuralFullAdder adder3 (sum[3], carryout, a[3], b[3], co2);
 
   wire n_overflow;
-  `XOR Xor_3(overflow, sum[3], carryout);
+  `XOR Xor_3(overflow, co2, carryout);
   //`NOT N_Xor_3(overflow, n_overflow);
 
 endmodule
