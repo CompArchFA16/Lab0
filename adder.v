@@ -7,7 +7,7 @@
 `define XNOR xnor #50
 `define XOR xor #50
 
-module FullAdder
+module structuralFullAdder
 (
   output sum,
   output carryout,
@@ -46,10 +46,10 @@ module FullAdder4bit
 );
   wire cin;
   assign cin = 1'b0;
-  FullAdder a0(.sum(sum[0]), .carryout(cout0), .a(a[0]), .b(b[0]), .carryin(cin));
-  FullAdder a1(.sum(sum[1]), .carryout(cout1), .a(a[1]), .b(b[1]), .carryin(cout0));
-  FullAdder a2(.sum(sum[2]), .carryout(cout2), .a(a[2]), .b(b[2]), .carryin(cout1));
-  FullAdder a3(.sum(sum[3]), .carryout(carryout), .a(a[3]), .b(b[3]), .carryin(cout2));
+  structuralFullAdder a0(.sum(sum[0]), .carryout(cout0), .a(a[0]), .b(b[0]), .carryin(cin));
+  structuralFullAdder a1(.sum(sum[1]), .carryout(cout1), .a(a[1]), .b(b[1]), .carryin(cout0));
+  structuralFullAdder a2(.sum(sum[2]), .carryout(cout2), .a(a[2]), .b(b[2]), .carryin(cout1));
+  structuralFullAdder a3(.sum(sum[3]), .carryout(carryout), .a(a[3]), .b(b[3]), .carryin(cout2));
 
   wire same_sign, switched;
   `XNOR xnor0(same_sign, a[3], b[3]);
