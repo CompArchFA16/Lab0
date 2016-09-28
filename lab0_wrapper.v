@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------
 //  Wrapper for Lab 0: Full Adder
-// 
-//  Rationale: 
+//
+//  Rationale:
 //     The ZYBO board has 4 buttons, 4 switches, and 4 LEDs. But if we want to
 //     show the results of a 4-bit add operation, we will need at least 6 LEDs!
 //
@@ -21,11 +21,11 @@
 //     btn3 - show carryout on led0, overflow on led1
 //
 //     Note: Buttons, switches, and LEDs have the least-significant (0) position
-//     on the right.      
+//     on the right.
 //--------------------------------------------------------------------------------
 
 `timescale 1ns / 1ps
-
+`include "adder4bit.v"
 
 //--------------------------------------------------------------------------------
 // Basic building block modules
@@ -43,7 +43,7 @@ module dff #( parameter W = 1 )
     always @(posedge trigger) begin
         if(enable) begin
             q <= d;
-        end 
+        end
     end
 endmodule
 
@@ -104,15 +104,15 @@ module lab0_wrapper
     wire res_sel;             // Select between display options
     wire cout;                // Carry out from adder
     wire ovf;                 // Overflow from adder
-    
+
     // Memory for stored operands (parametric width set to 4 bits)
     dff #(4) opA_mem(.trigger(clk), .enable(btn[0]), .d(sw), .q(opA));
     dff #(4) opB_mem(.trigger(clk), .enable(btn[1]), .d(sw), .q(opB));
-    
+
     // Capture button input to switch which MUX input to LEDs
     jkff1 src_sel(.trigger(clk), .j(btn[3]), .k(btn[2]), .q(res_sel));
     mux2 #(4) output_select(.in0(res0), .in1(res1), .sel(res_sel), .out(led));
-    
+
     // TODO: You write this in your adder.v
     FullAdder4bit adder(.sum(res0), .carryout(cout), .overflow(ovf), .a(opA), .b(opB));
 
@@ -121,5 +121,5 @@ module lab0_wrapper
     assign res1[1] = ovf;
     assign res1[2] = 1'b0;
     assign res1[3] = 1'b0;
-    
+
 endmodule
