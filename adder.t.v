@@ -12,8 +12,8 @@ module testFullAdder4bit();
   FullAdder4bit adder(.sum(res0), .carryout(cout), .overflow(ovf), .a(opA), .b(opB));
 
   initial begin
-    // $dumpfile("testFullAdder4bit.vcd");
-    // $dumpvars(0, testFullAdder4bit);
+    $dumpfile("testFullAdder4bit.vcd");
+    $dumpvars(0, testFullAdder4bit);
 
     $display("  A     B    |   Sum  Co  Ovf | Expected Output");
 
