@@ -1,0 +1,708 @@
+$date
+	Sun Sep 25 18:43:12 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module behavioralFullAdder $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # carryin $end
+$var wire 1 $ carryout $end
+$var wire 1 % sum $end
+$upscope $end
+$scope module forTesting $end
+$var wire 1 & cout $end
+$var wire 1 ' opA $end
+$var wire 1 ( opB $end
+$var wire 1 ) ovf $end
+$var wire 1 * res0 $end
+$scope module adder $end
+$var wire 4 + a [3:0] $end
+$var wire 1 , andbottom $end
+$var wire 1 - andtop $end
+$var wire 4 . b [3:0] $end
+$var wire 1 & carryout $end
+$var wire 1 / carryout0 $end
+$var wire 1 0 carryout1 $end
+$var wire 1 1 carryout2 $end
+$var wire 1 2 nA3 $end
+$var wire 1 3 nB3 $end
+$var wire 1 4 nS3 $end
+$var wire 1 ) overflow $end
+$var wire 4 5 sum [3:0] $end
+$scope module adder0 $end
+$var wire 1 6 AandB $end
+$var wire 1 7 AxorB $end
+$var wire 1 8 AxorBandCin $end
+$var wire 1 9 a $end
+$var wire 1 : b $end
+$var wire 1 ; carryin $end
+$var wire 1 / carryout $end
+$var wire 1 < sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 = AandB $end
+$var wire 1 > AxorB $end
+$var wire 1 ? AxorBandCin $end
+$var wire 1 @ a $end
+$var wire 1 A b $end
+$var wire 1 / carryin $end
+$var wire 1 0 carryout $end
+$var wire 1 B sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 C AandB $end
+$var wire 1 D AxorB $end
+$var wire 1 E AxorBandCin $end
+$var wire 1 F a $end
+$var wire 1 G b $end
+$var wire 1 0 carryin $end
+$var wire 1 1 carryout $end
+$var wire 1 H sum $end
+$upscope $end
+$scope module adder3 $end
+$var wire 1 I AandB $end
+$var wire 1 J AxorB $end
+$var wire 1 K AxorBandCin $end
+$var wire 1 L a $end
+$var wire 1 M b $end
+$var wire 1 1 carryin $end
+$var wire 1 & carryout $end
+$var wire 1 N sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module testFullAdder $end
+$var wire 1 O carryout $end
+$var wire 1 P overflow $end
+$var wire 4 Q sum [3:0] $end
+$var reg 4 R a [3:0] $end
+$var reg 4 S b [3:0] $end
+$scope module adder $end
+$var wire 4 T a [3:0] $end
+$var wire 1 U andbottom $end
+$var wire 1 V andtop $end
+$var wire 4 W b [3:0] $end
+$var wire 1 O carryout $end
+$var wire 1 X carryout0 $end
+$var wire 1 Y carryout1 $end
+$var wire 1 Z carryout2 $end
+$var wire 1 [ nA3 $end
+$var wire 1 \ nB3 $end
+$var wire 1 ] nS3 $end
+$var wire 1 P overflow $end
+$var wire 4 ^ sum [3:0] $end
+$scope module adder0 $end
+$var wire 1 _ AandB $end
+$var wire 1 ` AxorB $end
+$var wire 1 a AxorBandCin $end
+$var wire 1 b a $end
+$var wire 1 c b $end
+$var wire 1 d carryin $end
+$var wire 1 X carryout $end
+$var wire 1 e sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 f AandB $end
+$var wire 1 g AxorB $end
+$var wire 1 h AxorBandCin $end
+$var wire 1 i a $end
+$var wire 1 j b $end
+$var wire 1 X carryin $end
+$var wire 1 Y carryout $end
+$var wire 1 k sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 l AandB $end
+$var wire 1 m AxorB $end
+$var wire 1 n AxorBandCin $end
+$var wire 1 o a $end
+$var wire 1 p b $end
+$var wire 1 Y carryin $end
+$var wire 1 Z carryout $end
+$var wire 1 q sum $end
+$upscope $end
+$scope module adder3 $end
+$var wire 1 r AandB $end
+$var wire 1 s AxorB $end
+$var wire 1 t AxorBandCin $end
+$var wire 1 u a $end
+$var wire 1 v b $end
+$var wire 1 Z carryin $end
+$var wire 1 O carryout $end
+$var wire 1 w sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xw
+0v
+0u
+xt
+zs
+zr
+xq
+0p
+0o
+xn
+zm
+zl
+xk
+0j
+0i
+xh
+zg
+zf
+xe
+0d
+1c
+0b
+za
+z`
+z_
+bx ^
+x]
+z\
+z[
+xZ
+xY
+xX
+b1 W
+xV
+zU
+b0 T
+b1 S
+b0 R
+bx Q
+xP
+xO
+xN
+0M
+0L
+xK
+zJ
+zI
+xH
+0G
+0F
+xE
+zD
+zC
+xB
+0A
+0@
+x?
+z>
+z=
+x<
+0;
+z:
+z9
+z8
+x7
+x6
+bx 5
+x4
+z3
+z2
+x1
+x0
+x/
+b0z .
+x-
+z,
+b0z +
+x*
+x)
+z(
+z'
+x&
+x%
+x$
+z#
+z"
+z!
+$end
+#50000
+13
+12
+1[
+1\
+0r
+0s
+0l
+0m
+0f
+0g
+0a
+0_
+1`
+0U
+0I
+0J
+0C
+0D
+0=
+0>
+08
+0,
+#100000
+0t
+0n
+0h
+0X
+1e
+bx1 Q
+bx1 ^
+0K
+0E
+0?
+#150000
+0O
+0Z
+0Y
+0k
+bx01 Q
+bx01 ^
+0&
+01
+00
+#200000
+0w
+0q
+b1 Q
+b1 ^
+0N
+0H
+b0xx 5
+#250000
+1]
+0V
+14
+0-
+#300000
+0P
+0)
+#1000000
+0c
+1j
+1o
+b10 S
+b10 W
+b100 R
+b100 T
+#1050000
+0`
+1g
+1m
+#1100000
+0e
+1k
+1q
+b110 Q
+b110 ^
+#2000000
+1c
+0j
+1b
+b1 S
+b1 W
+b101 R
+b101 T
+#2050000
+0g
+1_
+#2100000
+0k
+b100 Q
+b100 ^
+1X
+#2150000
+1k
+b110 Q
+b110 ^
+#3000000
+1j
+0b
+1i
+0o
+b11 S
+b11 W
+b10 R
+b10 T
+#3050000
+1`
+0_
+1f
+0m
+#3100000
+1e
+0X
+1Y
+0q
+b11 Q
+b11 ^
+#3150000
+0k
+1q
+b101 Q
+b101 ^
+#4000000
+0c
+0j
+1p
+1v
+1o
+1u
+b1100 S
+b1100 W
+b1110 R
+b1110 T
+#4050000
+0`
+1g
+0f
+0\
+1l
+1r
+0[
+1U
+#4100000
+0e
+1k
+b110 Q
+b110 ^
+0Y
+1Z
+1O
+1P
+#4150000
+0q
+1w
+b1010 Q
+b1010 ^
+#4200000
+0]
+#4250000
+0U
+#4300000
+0P
+#5000000
+1c
+1j
+1b
+0i
+0o
+b1111 S
+b1111 W
+b1001 R
+b1001 T
+#5050000
+1_
+1m
+0l
+#5100000
+1X
+1q
+b1110 Q
+b1110 ^
+0Z
+#5150000
+0k
+1h
+0w
+b100 Q
+b100 ^
+#5200000
+1]
+1Y
+#5250000
+1U
+0q
+b0 Q
+b0 ^
+1n
+#5300000
+1P
+1Z
+#5350000
+1w
+b1000 Q
+b1000 ^
+#5400000
+0]
+#5450000
+0U
+#5500000
+0P
+#6000000
+0c
+0j
+1o
+b1100 S
+b1100 W
+b1101 R
+b1101 T
+#6050000
+1`
+0_
+0g
+0m
+1l
+#6100000
+1e
+0X
+1k
+0h
+1q
+b1111 Q
+b1111 ^
+0n
+#6150000
+0k
+b1101 Q
+b1101 ^
+0Y
+#6200000
+0q
+b1001 Q
+b1001 ^
+#7000000
+1c
+1j
+0b
+b1111 S
+b1111 W
+b1100 R
+b1100 T
+#7050000
+1g
+#7100000
+1k
+b1011 Q
+b1011 ^
+#8000000
+0c
+0j
+1b
+1i
+0o
+0u
+b1100 S
+b1100 W
+b11 R
+b11 T
+#8050000
+1m
+0l
+1s
+0r
+1[
+#8100000
+1q
+0Z
+0w
+b111 Q
+b111 ^
+1t
+0O
+#8150000
+1]
+1w
+b1111 Q
+b1111 ^
+0t
+1O
+#8200000
+0]
+0O
+#9000000
+1j
+1o
+b1110 S
+b1110 W
+b111 R
+b111 T
+#9050000
+0g
+1f
+0m
+1l
+#9100000
+0k
+1Y
+0q
+b1001 Q
+b1001 ^
+1Z
+#9150000
+1q
+0w
+b101 Q
+b101 ^
+1t
+#9200000
+1]
+1O
+#10000000
+1c
+0j
+0p
+0v
+0b
+0o
+1u
+b1 S
+b1 W
+b1010 R
+b1010 T
+#10050000
+1g
+0f
+1\
+0l
+0[
+#10100000
+1k
+b111 Q
+b111 ^
+0Y
+0Z
+#10150000
+0q
+1w
+b1011 Q
+b1011 ^
+0t
+#10200000
+0]
+0O
+#11000000
+0c
+1v
+1b
+0i
+1o
+0u
+b1000 S
+b1000 W
+b101 R
+b101 T
+#11050000
+0\
+0g
+1m
+1[
+#11100000
+0k
+1q
+b1101 Q
+b1101 ^
+#12000000
+1j
+1p
+0v
+1i
+b110 S
+b110 W
+b111 R
+b111 T
+#12050000
+0m
+1l
+0s
+1\
+1f
+#12100000
+0q
+1Z
+0w
+b1 Q
+b1 ^
+1V
+1Y
+#12150000
+1]
+0V
+1w
+1P
+1q
+b1101 Q
+b1101 ^
+#12200000
+0]
+1V
+0P
+#12250000
+1P
+#13000000
+0j
+0i
+b100 S
+b100 W
+b101 R
+b101 T
+#13050000
+0f
+#13100000
+0Y
+#13150000
+0q
+b1001 Q
+b1001 ^
+#14000000
+1j
+0p
+1v
+0o
+1u
+b1010 S
+b1010 W
+b1001 R
+b1001 T
+#14050000
+1g
+0\
+0l
+1r
+0[
+#14100000
+1k
+b1011 Q
+b1011 ^
+0Z
+1O
+0V
+#14150000
+0w
+b11 Q
+b11 ^
+0P
+#14200000
+1]
+#14250000
+1U
+#14300000
+1P
+#15000000
+0j
+1o
+b1000 S
+b1000 W
+b1101 R
+b1101 T
+#15050000
+0g
+1m
+#15100000
+0k
+1q
+b101 Q
+b101 ^
+#16000000
