@@ -77,5 +77,19 @@ module testAdder4bit();
     // 16. -8 - 1 = -9
     a = 4'b1000; b = 4'b1111; #1000
     $display("%b  %b   | %b  %b        %b        | 0111 1         1", a, b, sum, carryout, overflow);
+
+    // EXTRAS ==================================================================
+
+    // 17. 7 - 7 = 0
+    a = 4'b0111; b = 4'b1001; #1000
+    $display("%b  %b   | %b  %b        %b        | 0000 1         0", a, b, sum, carryout, overflow);
+
+    // 18. -1 - 1 = -2
+    a = 4'b1111; b = 4'b1111; #1000
+    $display("%b  %b   | %b  %b        %b        | 1110 1         0", a, b, sum, carryout, overflow);
+
+    // 19. 1 - 1 = 0
+    a = 4'b0001; b = 4'b1111; #1000
+    $display("%b  %b   | %b  %b        %b        | 0000 1         0", a, b, sum, carryout, overflow);
   end
 endmodule
