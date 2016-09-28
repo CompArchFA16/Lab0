@@ -17,14 +17,18 @@ module testFullAdder();
     wire[3:0] sum;
     wire carryout, overflow;
 
+    //toggle between these to test different modules found in adder.v
     //behavioralFullAdder adder(sum, carryout, a, b, carryin);
     //structuralFullAdder adder (sum, carryout, a, b, carryin);
     FullAdder4bit adder(sum, carryout, overflow, a, b);
 
     initial begin
-    $dumpfile("adder.vcd"); //for gtkwave
+    $dumpfile("adder.vcd"); //for gtkwave waveform analysis
     $dumpvars;
 
+    //Show results for four types of testing with 4 examples each: 4bit addition of positive and positive numbers (without overflow), 
+    //negative and negative numbers (without overflow), positive and negative numbers and cases specifically
+    //planned to overflow (2 positive-positive addition and 2 negative-negative addition)
     $display("A      B    | Cout  Sum  Overflow | Expected Output");
     $display("Positive + Positive, no overflow");
     a=4'b0000;b=4'b0001; #1000
