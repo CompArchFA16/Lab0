@@ -149,11 +149,11 @@ As expected, the worst-case delay for the sum is 11, the carryout is 12, and the
 ## Summary of testing performed on FPGA board
 It was very straightforward to program the FPGA board after attending the tutorial, and we tested out the 16 cases above on the board to make sure that the FPGA correctly worked for each one. We chose b1010 + b1010 for our test, and the photographs below show that the code and adder were working correctly.
 
-![FPGA Sum](https://github.com/tj-kim/Lab0/blob/master/fpga1.JPG)
+![FPGA Sum](https://github.com/tj-kim/Lab0/blob/master/IMG_1384.JPG)
 
 In the picture above, the FPGA is correctly computing the test case b1010 + b1010 and displaying the result b0100 on the LED’s in the bottom left corner.
 
-![FPGA CO and OF](https://github.com/tj-kim/Lab0/blob/master/fpga2.JPG)
+![FPGA CO and OF](https://github.com/tj-kim/Lab0/blob/master/IMG_1385.JPG)
 
 In the picture above, the FPGA board is correctly displaying that there is Overflow and Carryout in the case b1010 + b1010.
 
