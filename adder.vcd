@@ -1,0 +1,805 @@
+$date
+	Wed Sep 28 23:16:41 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module behavioralFullAdder $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # carryin $end
+$var wire 1 $ sum $end
+$var wire 1 % carryout $end
+$upscope $end
+$scope module test4BitAdder $end
+$var wire 4 & sum [3:0] $end
+$var wire 1 ' overflow $end
+$var wire 1 ( carryout $end
+$var reg 4 ) a [3:0] $end
+$var reg 4 * b [3:0] $end
+$scope module adder $end
+$var wire 4 + a [3:0] $end
+$var wire 4 , b [3:0] $end
+$var wire 1 ' overflow $end
+$var wire 4 - sum [3:0] $end
+$var wire 1 . carryout2 $end
+$var wire 1 / carryout1 $end
+$var wire 1 0 carryout0 $end
+$var wire 1 ( carryout $end
+$scope module adder0 $end
+$var wire 1 1 a $end
+$var wire 1 2 aandb $end
+$var wire 1 3 aandc $end
+$var wire 1 4 axorb $end
+$var wire 1 5 b $end
+$var wire 1 6 bandc $end
+$var wire 1 7 bcorac $end
+$var wire 1 8 carryin $end
+$var wire 1 0 carryout $end
+$var wire 1 9 sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 : a $end
+$var wire 1 ; aandb $end
+$var wire 1 < aandc $end
+$var wire 1 = axorb $end
+$var wire 1 > b $end
+$var wire 1 ? bandc $end
+$var wire 1 @ bcorac $end
+$var wire 1 0 carryin $end
+$var wire 1 / carryout $end
+$var wire 1 A sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 B a $end
+$var wire 1 C aandb $end
+$var wire 1 D aandc $end
+$var wire 1 E axorb $end
+$var wire 1 F b $end
+$var wire 1 G bandc $end
+$var wire 1 H bcorac $end
+$var wire 1 / carryin $end
+$var wire 1 . carryout $end
+$var wire 1 I sum $end
+$upscope $end
+$scope module adder3 $end
+$var wire 1 J a $end
+$var wire 1 K aandb $end
+$var wire 1 L aandc $end
+$var wire 1 M axorb $end
+$var wire 1 N b $end
+$var wire 1 O bandc $end
+$var wire 1 P bcorac $end
+$var wire 1 . carryin $end
+$var wire 1 ( carryout $end
+$var wire 1 Q sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xQ
+xP
+xO
+1N
+xM
+xL
+xK
+0J
+xI
+xH
+xG
+1F
+xE
+xD
+xC
+1B
+xA
+x@
+x?
+1>
+x=
+x<
+x;
+0:
+x9
+08
+x7
+x6
+05
+x4
+x3
+x2
+01
+x0
+x/
+x.
+bx -
+b1110 ,
+b100 +
+b1110 *
+b100 )
+x(
+x'
+bx &
+x%
+x$
+z#
+z"
+z!
+$end
+#50000
+02
+04
+0<
+0;
+1=
+1C
+0E
+0L
+0K
+1M
+03
+06
+#100000
+bx0 &
+bx0 -
+09
+1.
+07
+#150000
+1O
+b0xx0 &
+b0xx0 -
+0Q
+00
+#200000
+1P
+0?
+b0x10 &
+b0x10 -
+1A
+#250000
+1(
+0@
+#300000
+0'
+0/
+#350000
+0G
+0D
+b10 &
+b10 -
+0I
+#400000
+0H
+#1000000
+0F
+1:
+b1010 *
+b1010 ,
+b110 )
+b110 +
+#1050000
+0C
+1E
+1;
+0=
+#1100000
+0.
+1I
+1/
+b100 &
+b100 -
+0A
+#1150000
+0O
+1Q
+1'
+1D
+b1000 &
+b1000 -
+0I
+#1200000
+0P
+1H
+#1250000
+0(
+1.
+#1300000
+1O
+b0 &
+b0 -
+0Q
+#1350000
+1P
+#1400000
+1(
+#1450000
+0'
+#2000000
+15
+1F
+0N
+11
+0:
+1J
+b111 *
+b111 ,
+b1101 )
+b1101 +
+#2050000
+1G
+1C
+0E
+0O
+12
+0;
+1=
+1L
+#2100000
+1I
+10
+0/
+b110 &
+b110 -
+1A
+#2150000
+1?
+0A
+0G
+0D
+b0 &
+b0 -
+0I
+#2200000
+1@
+0H
+#2250000
+1/
+#2300000
+1G
+1D
+b100 &
+b100 -
+1I
+#2350000
+1H
+#3000000
+05
+0>
+0F
+01
+b0 *
+b0 ,
+b1100 )
+b1100 +
+#3050000
+0?
+0=
+0G
+0C
+1E
+02
+#3100000
+0@
+1A
+b10 &
+b10 -
+0I
+00
+#3150000
+0/
+b0 &
+b0 -
+0A
+#3200000
+0D
+b100 &
+b100 -
+1I
+#3250000
+0H
+#3300000
+0.
+#3350000
+0L
+b1100 &
+b1100 -
+1Q
+1'
+#3400000
+0P
+#3450000
+0(
+#3500000
+0'
+#4000000
+15
+1>
+1:
+0B
+0J
+b11 *
+b11 ,
+b10 )
+b10 +
+#4050000
+14
+1;
+0E
+0M
+#4100000
+19
+1/
+0I
+b1 &
+b1 -
+0Q
+#4150000
+b101 &
+b101 -
+1I
+#5000000
+05
+0>
+1B
+b0 *
+b0 ,
+b110 )
+b110 +
+#5050000
+04
+0;
+1=
+1D
+1E
+#5100000
+09
+0/
+1A
+1H
+b10 &
+b10 -
+0I
+#5150000
+0D
+b110 &
+b110 -
+1I
+1.
+#5200000
+0H
+b1110 &
+b1110 -
+1Q
+1'
+#5250000
+0.
+#5300000
+b110 &
+b110 -
+0Q
+0'
+#6000000
+15
+b1 *
+b1 ,
+#6050000
+14
+#6100000
+b111 &
+b111 -
+19
+#7000000
+1>
+11
+0:
+0B
+b11 *
+b11 ,
+b1 )
+b1 +
+#7050000
+12
+04
+0E
+#7100000
+10
+09
+b10 &
+b10 -
+0I
+#7150000
+1?
+b0 &
+b0 -
+0A
+#7200000
+1@
+#7250000
+1/
+#7300000
+b100 &
+b100 -
+1I
+#8000000
+0>
+1:
+1B
+b1 *
+b1 ,
+b111 )
+b111 +
+#8050000
+0?
+1<
+1D
+1E
+#8100000
+1H
+b0 &
+b0 -
+0I
+#8150000
+1.
+#8200000
+b1000 &
+b1000 -
+1Q
+1'
+#9000000
+1F
+0:
+b101 *
+b101 ,
+b101 )
+b101 +
+#9050000
+1G
+1C
+0E
+0<
+0=
+#9100000
+1I
+0@
+b1110 &
+b1110 -
+1A
+#9150000
+0/
+#9200000
+0G
+0D
+b1010 &
+b1010 -
+0I
+#9250000
+0H
+#10000000
+05
+1>
+1:
+0B
+b110 *
+b110 ,
+b11 )
+b11 +
+#10050000
+02
+14
+1?
+1<
+1;
+0C
+1E
+#10100000
+00
+19
+1@
+1/
+0.
+b1111 &
+b1111 -
+1I
+#10150000
+0?
+0<
+0A
+1G
+0I
+b1 &
+b1 -
+0Q
+0'
+#10200000
+0@
+1H
+#10250000
+1.
+#10300000
+b1001 &
+b1001 -
+1Q
+1'
+#11000000
+01
+1B
+b110 )
+b110 +
+#11050000
+04
+1D
+1C
+0E
+#11100000
+09
+b1100 &
+b1100 -
+1I
+#12000000
+0F
+1N
+0:
+1J
+b1010 *
+b1010 ,
+b1100 )
+b1100 +
+#12050000
+0G
+0C
+1E
+1O
+0;
+1=
+1L
+1K
+#12100000
+0I
+0/
+b1010 &
+b1010 -
+1A
+1P
+1(
+#12150000
+0D
+b1110 &
+b1110 -
+1I
+0'
+#12200000
+0H
+#12250000
+0.
+#12300000
+0O
+0L
+b110 &
+b110 -
+0Q
+1'
+#12350000
+0P
+#13000000
+0>
+11
+1:
+b1000 *
+b1000 ,
+b1111 )
+b1111 +
+#13050000
+14
+#13100000
+b111 &
+b111 -
+19
+#14000000
+15
+1F
+01
+0B
+b1101 *
+b1101 ,
+b1010 )
+b1010 +
+#15000000
+1>
+0F
+11
+b1011 *
+b1011 ,
+b1011 )
+b1011 +
+#15050000
+1;
+0=
+0E
+12
+04
+#15100000
+1/
+0A
+0I
+10
+b0 &
+b0 -
+09
+#15150000
+1I
+1?
+1<
+b110 &
+b110 -
+1A
+#15200000
+1@
+#16000000
+05
+1F
+0:
+1B
+b1110 *
+b1110 ,
+b1101 )
+b1101 +
+#16050000
+02
+14
+1G
+0<
+0;
+1=
+1D
+1C
+#16100000
+00
+19
+b101 &
+b101 -
+0A
+1H
+1.
+#16150000
+0?
+1A
+1O
+1L
+b1111 &
+b1111 -
+1Q
+0'
+#16200000
+0@
+1P
+#16250000
+0/
+#16300000
+0G
+0D
+b1011 &
+b1011 -
+0I
+#16350000
+0H
+#17000000
+15
+0>
+0F
+1:
+b1001 *
+b1001 ,
+b1111 )
+b1111 +
+#17050000
+12
+04
+0C
+1E
+#17100000
+10
+09
+0.
+b1110 &
+b1110 -
+1I
+#17150000
+1<
+0A
+0O
+0L
+b100 &
+b100 -
+0Q
+1'
+#17200000
+1@
+0P
+#17250000
+1/
+#17300000
+1D
+b0 &
+b0 -
+0I
+#17350000
+1H
+#17400000
+1.
+#17450000
+1O
+1L
+b1000 &
+b1000 -
+1Q
+0'
+#17500000
+1P
+#18000000
+1>
+1F
+01
+0B
+b1111 *
+b1111 ,
+b1010 )
+b1010 +
+#18050000
+1?
+1;
+0=
+1G
+02
+14
+0D
+#18100000
+1A
+00
+b1011 &
+b1011 -
+19
+#18150000
+0?
+0<
+b1001 &
+b1001 -
+0A
+#18200000
+0@
+#19000000
+05
+0>
+0:
+1B
+b1100 *
+b1100 ,
+b1100 )
+b1100 +
+#19050000
+04
+0;
+1D
+1C
+0E
+#19100000
+09
+0/
+b1100 &
+b1100 -
+1I
+#19150000
+0G
+0D
+b1000 &
+b1000 -
+0I
+#19200000
+0H
+#20000000
