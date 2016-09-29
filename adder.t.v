@@ -14,11 +14,11 @@ module test4BitAdder();
         $display("Testing Normal Operation");
         $display(" a    |  b    | sum    co of | Expected");
         //a=-4'd4;
-        a=-4;
-        b=4'd2;
+        a=4;
+        b=-2;
         #1000
-        $display("%b  | %b  | %b   %b  %b  | 8 0 0", a, b, sum, carryout, overflow);
-        $display(" %d   |  %d   | %d     %b  %b  | 8 0 0", $signed(a), $signed(b), $signed(sum), carryout, overflow);
+        $display("%b  | %b  | %b   %b  %b  | 0010 0 0", a, b, sum, carryout, overflow);
+        $display(" %d   |  %d   | %d     %b  %b  | 2 0 0", $signed(a), $signed(b), $signed(sum), carryout, overflow);
         $display("");
         a=6;
         b=6;
