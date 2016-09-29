@@ -32,16 +32,15 @@ endmodule
 
 wire carryin = 0;
 
-wire carryout_0;
-wire carryout_1; 
+wire carryout_0;//placeholders
+wire carryout_1;
 wire carryout_2;
 
-FullAdder1bit fa1(sum[0],carryout_0,a[0],b[0],carryin);
-FullAdder1bit fa2(sum[1],carryout_1,a[1],b[1],carryout_0);
-FullAdder1bit fa3(sum[2],carryout_2,a[2],b[2],carryout_1);
-FullAdder1bit fa4(sum[3],carryout,a[3],b[3],carryout_2);
-`XOR xorgate(overflow, carryout, carryout_2);
-//`AND andgate(overflow, carryout, 1);
-//overflow = carryout;
+FullAdder1bit fa1(sum[0],carryout_0,a[0],b[0],carryin); // bit 0
+FullAdder1bit fa2(sum[1],carryout_1,a[1],b[1],carryout_0); // bit 1
+FullAdder1bit fa3(sum[2],carryout_2,a[2],b[2],carryout_1); // bit 2
+FullAdder1bit fa4(sum[3],carryout,a[3],b[3],carryout_2); // bit 3, direct to carryout
+
+`XOR xorgate(overflow, carryout, carryout_2); //XOR gate determines the sign mismatch
 
 endmodule
