@@ -17,7 +17,6 @@ module test4BitAdder();
         $display("Testing Normal Operation");
         $display(" a    |  b    | sum    co of | Expected");
 
-
         // 1
         a=4;
         b=-2;
@@ -150,7 +149,7 @@ module test4BitAdder();
 
         // 15
         a=-6;
-        b=-3; // 3
+        b=-3;
         #1000
         $display("15");
         $display("%b  | %b  | %b   %b  %b  | 0111 1 1", a, b, sum, carryout, overflow);
@@ -187,7 +186,7 @@ module test4BitAdder();
 
         // 19
         a=-6;
-        b=-1; // 3
+        b=-1;
         #1000
         $display("19");
         $display("%b  | %b  | %b   %b  %b  | 1001 1 0", a, b, sum, carryout, overflow);
