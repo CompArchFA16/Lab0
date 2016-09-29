@@ -141,3 +141,14 @@ For the 4-bit adder, we assumed XOR gates have a delay of 1 time step. However, 
 | OF | 3+3+3+3+1 = 13 | 3+3+3=1 | 3+3+1 | 3+1 |
 
 As expected, the worst-case delay for the sum is 11, the carryout is 12, and the overflow is 13.
+
+## Summary of testing performed on FPGA board
+	It was very straightforward to program the FPGA board after attending the tutorial, and we tested out the 16 cases above on the board to make sure that the FPGA correctly worked for each one. We chose b1010 + b1010 for our test, and the photographs below show that the code and adder were working correctly.
+
+
+## Summary Statistics
+	We aren’t using a clock for this lab so we do not have any relevant clock data in the summary statistics section. There isn’t much to say for power either, as this circuit is very small.
+	As far as area is concerned, we spent a 13% of the available I/O space, and almost minimal space everywhere else. This means that our circuit is very small compared to the area of the board.
+
+## Short Conclusion
+Overall, we learned how to black box previously made components and utilize them. We are looking forward to learning more about the summary statistics as the statistics were not that important for this lab as we did not vary design for efficiency, and we were working with a small scale digital circuit.
