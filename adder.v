@@ -1,4 +1,5 @@
 // Adder circuit for 1 bit and 4 bit (2s complement) 
+// By Jay Woo, Paul Krusell, TJ Kim
 
 // Setting Delays
 `define AND and #50 //delay of 50 units
