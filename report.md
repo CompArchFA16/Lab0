@@ -16,7 +16,7 @@ We tested the following combination of scenarios.
 Both the test bench simulation and the FPGA passed our test cases, so we are happy with how we set up our verilog code.
 
 ## Test Case Failures and Changes
-Test Case 1
+#### Test Case 1
 
 Key:
 * Ai, where i is the ith digit of the bit string (i goes from 0 to 3)
@@ -33,13 +33,15 @@ Key:
 | 0  | 0  | 0  | 1  | 0  | 0  | 1  | 1  | 0  | x  | x  | x  | 0  |
 | 0  | 0  | 0  | 1  | 0  | 1  | 0  | 0  | 0  | x  | x  | x  | 1  |
 
-#### Notes and Observations
+Notes and Observations
+
 * Here we used the exhaustive case for the initial test to get a bigger picture of where our problems were occurring. We only included a portion of that for this explanation (We did not read the part of the lab telling us that we wanted around 16 cases yet).
 * The only times there seemed to be no errors was when one of the values added was ‘0000’ or when there was a lack of obvious carryout involved.
 * However, in some cases there were no carryouts but still errors were present.
 * We did not mention what the final carryouts were in this case.
 
-#### Fixes
+Fixes
+
 * We were confused what the difference between ‘carryout’ and ‘overflow’ was, so we reviewed the rules of 2’s complement to refine our understanding. We added both to the test case table for future iterations.
 * We were not utilizing intermediate wires in our FullAdder4bit module, and we were misusing the output ‘carryout’ as shown below. This was causing most of the errors.
 ```verilog
@@ -62,7 +64,7 @@ module FullAdder4bit
 endmodule
 ```
 
-Test Case 2
+#### Test Case 2
 
 Key:
 * Added CO, which stands for the final carryout.
@@ -76,12 +78,14 @@ Key:
 | 1  | 0  | 1  | 0  | 1  | 0  | 1  | 0  | 1  | 0  | 1  | 0  | 0  | 0  | --O  |
 | 0  | 1  | 0  | 1  | 1  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 1  | 0  | +-NO |
 
-#### Notes and Observations
+Notes and Observations
+
 * We improved our test case table as we added carryout and case informations to it. We also decreased the number of test cases to 5, which we decreased too much (we still did not read the part about the 16 test cases yet).
 * The Case indicator in the table tells us what is the sign of the 2 values that are added, and whether overflow will happen or not (+ = positive, - = negative, NO = No Overflow, O = Overflow).
-* Other than the positive + negative case, the overflow flag seems to be flipped. We are returning 1 for overflow for cases with no overflow and vice versa.
+* Other than the positive + negative case, the overflow flag seems to be flipped. We are returning 1 for overflow for cases with no overflow and vice 
 
-#### Fixes
+Fixes
+
 Pre-fix code
 ```verilog
 module FullAdder4bit
