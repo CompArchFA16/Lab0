@@ -46,11 +46,14 @@ module FullAdder4bit
 );
   wire cin;
   assign cin = 1'b0;
+  // Chain four single bit adders together to form a 4 bit adder
   structuralFullAdder a0(.sum(sum[0]), .carryout(cout0), .a(a[0]), .b(b[0]), .carryin(cin));
   structuralFullAdder a1(.sum(sum[1]), .carryout(cout1), .a(a[1]), .b(b[1]), .carryin(cout0));
   structuralFullAdder a2(.sum(sum[2]), .carryout(cout2), .a(a[2]), .b(b[2]), .carryin(cout1));
   structuralFullAdder a3(.sum(sum[3]), .carryout(carryout), .a(a[3]), .b(b[3]), .carryin(cout2));
-
+  // Overflow has occured if:
+  //   The result of adding two positive numbers is negative
+  //   The result of adding two negative numbers is positive
   wire same_sign, switched;
   `XNOR xnor0(same_sign, a[3], b[3]);
   `XOR xor0(switched, sum[3], a[3]);
