@@ -1,5 +1,5 @@
 $date
-	Sun Sep 25 01:26:45 2016
+	Thu Sep 29 00:18:07 2016
 $end
 $version
 	Icarus Verilog
@@ -17,131 +17,498 @@ $scope module adder4bit $end
 $var wire 4 & a [3:0] $end
 $var wire 4 ' b [3:0] $end
 $var wire 1 ! carryout $end
+$var wire 1 ( co0 $end
+$var wire 1 ) co1 $end
+$var wire 1 * co2 $end
 $var wire 1 " overflow $end
-$var wire 4 ( sum [3:0] $end
+$var wire 4 + sum [3:0] $end
 $scope module adder0 $end
-$var wire 1 ) And_AB $end
-$var wire 1 * And_XorAB_C $end
-$var wire 1 + Xor_AB $end
-$var wire 1 , a $end
-$var wire 1 - b $end
-$var wire 1 . carryin $end
-$var wire 1 ! carryout $end
-$var wire 1 / sum $end
+$var wire 1 , And_AB $end
+$var wire 1 - And_XorAB_C $end
+$var wire 1 . Xor_AB $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 1 carryin $end
+$var wire 1 ( carryout $end
+$var wire 1 2 sum $end
 $upscope $end
 $scope module adder1 $end
-$var wire 1 0 And_AB $end
-$var wire 1 1 And_XorAB_C $end
-$var wire 1 2 Xor_AB $end
-$var wire 1 3 a $end
-$var wire 1 4 b $end
-$var wire 1 ! carryin $end
-$var wire 1 ! carryout $end
-$var wire 1 5 sum $end
+$var wire 1 3 And_AB $end
+$var wire 1 4 And_XorAB_C $end
+$var wire 1 5 Xor_AB $end
+$var wire 1 6 a $end
+$var wire 1 7 b $end
+$var wire 1 ( carryin $end
+$var wire 1 ) carryout $end
+$var wire 1 8 sum $end
 $upscope $end
 $scope module adder2 $end
-$var wire 1 6 And_AB $end
-$var wire 1 7 And_XorAB_C $end
-$var wire 1 8 Xor_AB $end
-$var wire 1 9 a $end
-$var wire 1 : b $end
-$var wire 1 ! carryin $end
-$var wire 1 ! carryout $end
-$var wire 1 ; sum $end
+$var wire 1 9 And_AB $end
+$var wire 1 : And_XorAB_C $end
+$var wire 1 ; Xor_AB $end
+$var wire 1 < a $end
+$var wire 1 = b $end
+$var wire 1 ) carryin $end
+$var wire 1 * carryout $end
+$var wire 1 > sum $end
 $upscope $end
 $scope module adder3 $end
-$var wire 1 < And_AB $end
-$var wire 1 = And_XorAB_C $end
-$var wire 1 > Xor_AB $end
-$var wire 1 ? a $end
-$var wire 1 @ b $end
-$var wire 1 ! carryin $end
-$var wire 1 " carryout $end
-$var wire 1 A sum $end
+$var wire 1 ? And_AB $end
+$var wire 1 @ And_XorAB_C $end
+$var wire 1 A Xor_AB $end
+$var wire 1 B a $end
+$var wire 1 C b $end
+$var wire 1 * carryin $end
+$var wire 1 ! carryout $end
+$var wire 1 D sum $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-xA
-1@
-1?
-z>
-x=
-z<
-x;
-0:
-09
-z8
-x7
-z6
-x5
-04
-03
-z2
-x1
-z0
-x/
-0.
-0-
-0,
-z+
-z*
-z)
-bx (
-b1000 '
-b1000 &
-b1000 %
-b1000 $
+xD
+1C
+1B
+zA
+x@
+z?
+x>
+1=
+1<
+z;
+x:
+z9
+x8
+17
+16
+z5
+x4
+z3
+x2
+01
+10
+1/
+z.
+z-
+z,
+bx +
+x*
+x)
+x(
+b1111 '
+b1111 &
+b1111 %
+b1111 $
 bx #
 x"
 x!
 $end
 #50000
-1<
-0>
-06
-08
-00
-02
-0*
-0)
-0+
+1?
+0A
+19
+0;
+13
+05
+0-
+1,
+0.
 #100000
-1"
-0=
-07
-01
-0/
+1!
+0@
+1*
+0:
+1)
+04
+1(
+02
 bx0 #
-bx0 (
+bx0 +
 #150000
+1D
+0"
+1>
+18
+b1110 #
+b1110 +
+#1000000
+0=
+0<
+b1011 %
+b1011 '
+b1011 $
+b1011 &
+#1050000
+09
+#1100000
+0*
+#1150000
+0D
+b110 #
+b110 +
+1"
+#2000000
+00
+07
+1=
+0/
+1<
+b1100 %
+b1100 '
+b1110 $
+b1110 &
+#2050000
+15
+03
+0,
+19
+#2100000
+08
+b100 #
+b100 +
+14
+0)
+0(
+1*
+#2150000
+1)
+0>
+18
+04
+1D
+b1010 #
+b1010 +
+0"
+#2200000
+1>
+b1110 #
+b1110 +
+0)
+#2250000
+0>
+b1010 #
+b1010 +
+#3000000
+0=
+1/
+b1000 %
+b1000 '
+b1111 $
+b1111 &
+#3050000
+1;
+09
+1.
+#3100000
+1>
+0*
+12
+b1111 #
+b1111 +
+#3150000
+0D
+b111 #
+b111 +
+1"
+#4000000
+10
+17
+0C
+0<
+0B
+b11 %
+b11 '
+b11 $
+b11 &
+#4050000
+0.
+1,
+05
+13
+0;
+0?
+#4100000
+02
+1(
+08
+1)
+0>
+b0 #
+b0 +
 0!
-#200000
+#4150000
+18
+1>
+b110 #
+b110 +
+0"
+#5000000
+07
+1=
+06
+1<
+b101 %
+b101 '
+b101 $
+b101 &
+#5050000
+03
+19
+#5100000
+0)
+1*
+#5150000
+0>
+1D
+b1010 #
+b1010 +
+1"
+#6000000
+00
+17
+0=
+0<
+b10 %
+b10 '
+b1 $
+b1 &
+#6050000
+1.
+0,
+15
+09
+#6100000
+12
+0(
+08
+b1001 #
+b1001 +
+14
+0*
+#6150000
+18
+04
+1)
+0D
+b11 #
+b11 +
+0"
+#6200000
+0)
+1>
+b111 #
+b111 +
+#6250000
+0>
+b11 #
+b11 +
+#7000000
+16
+1<
+b111 $
+b111 &
+#7050000
+05
+13
+1;
+#7100000
+08
+1)
+1>
+b101 #
+b101 +
+#7150000
+0>
+b1 #
+b1 +
+1:
+#7200000
+1*
+#7250000
+1D
+b1001 #
+b1001 +
+1"
+#8000000
+07
+1C
+06
+0<
+b1000 %
+b1000 '
+b1 $
+b1 &
+#8050000
+1A
+03
+0;
+#8100000
+0D
+1@
+0)
+1>
+b101 #
+b101 +
+0:
+#8150000
+1!
+0>
+b1 #
+b1 +
+0*
+#8200000
+1D
+b1001 #
+b1001 +
+0@
+#8250000
+0!
+#8300000
+0"
+#9000000
+10
+17
+1=
+b1111 %
+b1111 '
+#9050000
+0.
+1,
+15
+1;
+#9100000
+02
+1(
+18
+1>
+b1110 #
+b1110 +
+#9150000
+08
+b1100 #
+b1100 +
+14
+#9200000
+1)
+#9250000
+0>
+b1000 #
+b1000 +
+1:
+#9300000
+1*
+#9350000
+0D
+b0 #
+b0 +
+1@
+1"
+#9400000
+1!
+#9450000
+0"
+#10000000
+07
+0=
+16
+1<
+b1001 %
+b1001 '
+b111 $
+b111 &
+#11000000
+00
+0C
+0/
+06
+0<
+b0 %
+b0 '
+b0 $
+b0 &
+#11050000
+0A
+0,
 05
 0;
-0A
+#11100000
+1D
+0@
+0(
+18
+04
+1>
+b1110 #
+b1110 +
+0:
+#11150000
+0!
+08
+b1100 #
+b1100 +
+0)
+0*
+#11200000
+0>
+0D
 b0 #
-b0 (
-#1000000
-1-
-1:
-1,
-19
-b1101 %
-b1101 '
-b1101 $
-b1101 &
-#1050000
-1)
+b0 +
+#12000000
+10
+17
+1=
+1C
+b1111 %
+b1111 '
+#12050000
+1.
+15
+1;
+1A
+#12100000
+12
+18
+1>
+1D
+b1111 #
+b1111 +
+#13000000
+0C
+b111 %
+b111 '
+#13050000
+0A
+#13100000
+0D
+b111 #
+b111 +
+#14000000
+00
+07
+0=
+1/
 16
-#1100000
-x!
-#1150000
-x5
-x;
-xA
-bx0 #
-bx0 (
-#2000000
+1<
+1B
+b0 %
+b0 '
+b1111 $
+b1111 &
+#14050000
+1A
+#14100000
+1D
+b1111 #
+b1111 +
+#15000000
+0B
+b111 $
+b111 &
+#15050000
+0A
+#15100000
+0D
+b111 #
+b111 +
+#16000000

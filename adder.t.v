@@ -14,8 +14,8 @@ module testFullAdder();
 
     initial begin
     // Dump trace to a file. Open with gtkwave.
-    //$dumpfile("adder.vcd");
-    //$dumpvars;
+    $dumpfile("adder.vcd");
+    $dumpvars;
 
         // Your test code here
     $display("a3  a2  a1  a0 | b3  b2  b1  b0 | CO  s3  s2  s1  s0  | OF");
