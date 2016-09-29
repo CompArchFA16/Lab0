@@ -3,10 +3,10 @@
 `include "adder.v"
 
 module testFullAdder4bit();
-	reg [4:0] a;
-	reg [4:0] b;
+	reg signed [4:0] a;
+	reg signed [4:0] b;
     wire overflow, carryout;
-    wire [3:0] sum; 
+    wire signed [3:0] sum; 
 
     FullAdder4bit adder (sum[3:0], carryout, overflow, a[3:0], b[3:0]);
 
@@ -27,8 +27,8 @@ module testFullAdder4bit();
 		
 		$display(" a  b | sum | overflow | carryout");
 		
-		for(a=0; a< 16; a = a + 1) begin
-			for(b=0;b<16;b = b + 1) begin
+		for(a= -8; a < 8; a = a + 1) begin
+			for(b = -8;b < 8;b = b + 1) begin
 				#1000
 				$display("%d %d | %d  |    %d     |   %d", a, b, sum, overflow, carryout);
 			end
