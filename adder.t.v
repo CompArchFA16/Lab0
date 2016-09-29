@@ -10,7 +10,7 @@ module testFullAdder();
     reg[8:0] i; //counting thru forloop
 
     //behavioralFullAdder adder (sum, carryout, a, b, carryin);
-    FullAdder4bit adder4bit (sum, carryout, overflow, a, b);
+    FullAdder4bit adder4bit (sum, carryout, overflow, a, b);    // Call upon 4 bit adder
 
     initial begin
     // Dump trace to a file. Open with gtkwave.
@@ -18,11 +18,10 @@ module testFullAdder();
     $dumpvars;
 
         // Your test code here
+
+        // Test cases, reasons for each specific case in markdown final report
+        // Table shows 4bit a, 4bit b, carry out, sum, and overflow
     $display("a3  a2  a1  a0 | b3  b2  b1  b0 | CO  s3  s2  s1  s0  | OF");
-    // for (i=8'b00000000; i<=8'b11111111; i=i+1) begin
-    //     a=i[7:4]; b=i[3:0]; #1000 
-    //     $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   | %b", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
-    // end
     a=4'b1111; b=4'b1111; #1000 
     $display("%b   %b   %b   %b  | %b   %b   %b   %b  | %b   %b   %b   %b   %b   | %b  ", a[3], a[2], a[1], a[0], b[3], b[2], b[1], b[0], carryout, sum[3], sum[2], sum[1], sum[0], overflow);
     a=4'b1011; b=4'b1011; #1000 
