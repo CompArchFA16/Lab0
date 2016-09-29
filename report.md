@@ -4,7 +4,7 @@ In Lab 0, we build a 4 bit adder using a 1 bit adder from a previous homework as
 ## Test Strategy
 ![Test Table](https://github.com/tj-kim/Lab0/blob/master/test_table.png)
 
-The above table shows the 16 test cases we used for this lab. The same test cases were used both for the test bench simulation and the FPGA testing, as we believed that the cases very pretty extensive and touched a lot of different scenarios.
+The above table shows the 16 test cases we used for this lab. The same test cases were used both for the test bench simulation and the FPGA testing, as we believed that the cases were pretty extensive and touched a lot of different scenarios.
 
 We tested the following combination of scenarios.
 * What happens if we add 2 numbers with different signs? (negative + negative, positive + positive, positive + negative)
@@ -13,8 +13,16 @@ We tested the following combination of scenarios.
 * What happens when one or both of the values we are adding are zero?
 * What happens if we keep the same values but switch the order we add them?
 
+Both the test bench simulation and the FPGA passed our test cases, so we are happy with how we set up our verilog code.
+
 ## Test Case Failures and Changes
 Test Case 1
+
+Key:
+* Ai, where i is the ith digit of the bit string (i goes from 0 to 3)
+* Bi, where i is the ith digit of the bit string (i goes from 0 to 3)
+* Si, similar concept as above two, except for the sum bit string
+* OF, representative of the presence of overflow
 
 | A3 | A2 | A1 | A0 | B3 | B2 | B1 | B0 | OF | S3 | S2 | S1 | S0 |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
@@ -53,6 +61,10 @@ endmodule
 ```
 
 Test Case 2
+
+Key:
+* Added CO, which stands for the final carryout.
+* Case, written by us, indicating which case we are testing.
 
 | A3 | A2 | A1 | A0 | B3 | B2 | B1 | B0 | CO | S3 | S2 | S1 | S0 | OF | Case |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|----|------|
